@@ -1,28 +1,23 @@
 [
   {
     "id": 1,
-    "text": "Practice React",
-    "completed": true
+    "text": "Practice React"
   },
   {
     "id": 2,
-    "text": "Grocery shopping",
-    "completed": false
+    "text": "Grocery shopping"
   },
   {
     "id": 3,
-    "text": "Laundry",
-    "completed": true
+    "text": "Laundry"
   },
   {
     "id": 4,
-    "text": "Do a coding challenge",
-    "completed": true
+    "text": "Do a coding challenge"
   },
   {
     "id": 5,
-    "text": "Play Animal Crossing",
-    "completed": false
+    "text": "Play Animal Crossing"
   }
 ]
 

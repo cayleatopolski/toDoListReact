@@ -1,23 +1,23 @@
-import { React, useState } from 'react';
-import todosData from '../todosData.json';
+import React, { useState } from 'react';
 
-const TodoItem = (props) => {
-  // const [todoList, setTodos] = useState(todosData);
+const TodoItem = ({ text, setCount, count }) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // const listOfTodos = todosData.map((todo, index) => (
-  //   <div key={todo.id} todo={todo} />
-  // ));
+  const handleClick = () => {
+    setIsCompleted(!isCompleted);
+
+    !isCompleted && setCount(count + 1);
+    isCompleted && setCount(count - 1);
+  };
 
   return (
-    <div>
-      <label>
-        <div
-          style={isCompleted ? { textDecoration: 'line-through' } : {}}
-        ></div>
-        <input type='checkbox' name='item' checked='false'></input>
-      </label>
-      <button type='button'>Delete</button>
+    <div style={{ display: 'flex' }}>
+      <p style={isCompleted ? { textDecoration: 'line-through' } : {}}>
+        {text}
+      </p>
+      <button type='button' onClick={handleClick}>
+        {isCompleted ? 'Undo' : 'Finish'}
+      </button>
     </div>
   );
 };

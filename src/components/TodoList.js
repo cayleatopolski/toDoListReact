@@ -1,12 +1,19 @@
-import React from 'react';
-import todosData from '../todosData.json';
+import React, { memo } from 'react';
+import TodoItem from './TodoItem';
 
-const TodoList = () => {
-  const listOfTodos = todosData.map((todo, index) => (
-    <div key={todo.id} todo={todo} />
-  ));
-
-  return <div>{listOfTodos}</div>;
+const TodoList = ({ todosData, setCount, count }) => {
+  return (
+    <div>
+      {todosData.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          text={todo.text}
+          setCount={setCount}
+          count={count}
+        />
+      ))}
+    </div>
+  );
 };
 
-export default TodoList;
+export default memo(TodoList);
