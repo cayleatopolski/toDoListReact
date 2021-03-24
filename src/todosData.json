@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "text": "Practice React",
+    "completed": true
+  },
+  {
+    "id": 2,
+    "text": "Grocery shopping",
+    "completed": false
+  },
+  {
+    "id": 3,
+    "text": "Laundry",
+    "completed": true
+  },
+  {
+    "id": 4,
+    "text": "Do a coding challenge",
+    "completed": true
+  },
+  {
+    "id": 5,
+    "text": "Play Animal Crossing",
+    "completed": false
+  }
+]
+
+

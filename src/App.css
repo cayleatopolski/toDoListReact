@@ -131,7 +131,7 @@ h2 {
   padding-bottom: 10px;
 }
 
-.listItems {
+#todoList {
   background: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
