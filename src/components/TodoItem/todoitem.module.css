@@ -1,0 +1,39 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+  align-items: center;
+  border-bottom: solid 1px lightgrey;
+}
+
+.todoItem:last-child {
+  border-bottom: none;
+}
+
+p {
+  text-align: center;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.incomplete {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.btnstyles {
+  color: #339bff;
+  cursor: pointer;
+}
+
+.btnstyles:hover {
+  color: #ff3377;
+  transition: ease-in 0.2s;
+}

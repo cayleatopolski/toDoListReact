@@ -1,0 +1,17 @@
+.header {
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.subheaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
+}
+
+.count {
+  font-weight: 300;
+}
