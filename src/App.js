@@ -10,9 +10,9 @@ const App = () => {
   return (
     <main>
       <Greeting />
-      <section className='todoList'>
+      <div className='todoList'>
         <TodoList todosData={todosData} setCount={setCount} count={count} />
-      </section>
+      </div>
     </main>
   );
 };
