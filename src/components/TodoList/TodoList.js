@@ -4,9 +4,10 @@ import Filter from '../Filter/Filter';
 import AddItem from '../AddItem/AddItem';
 import styles from './todoList.module.css';
 
-const TodoList = ({ todosData, setCount, count }) => {
+const TodoList = ({ todosData }) => {
   const [tasks, setTasks] = useState(todosData);
-  const [filteredTasks, setFilteredTasks] = useState(tasks);
+  const [count, setCount] = useState(0);
+  // const [filteredTasks, setFilteredTasks] = useState(tasks);
 
   return (
     <div>
@@ -19,18 +20,20 @@ const TodoList = ({ todosData, setCount, count }) => {
       </div>
 
       <div>
-        {todosData.map((todo) => (
+        {tasks.map((todo) => (
           <TodoItem
             key={todo.id}
             text={todo.text}
             setCount={setCount}
             count={count}
+            tasks={tasks}
+            setTasks={setTasks}
           />
         ))}
       </div>
-      <AddItem />
+      <AddItem tasks={tasks} setTasks={setTasks} />
     </div>
   );
 };
 
-export default memo(TodoList);
+export default TodoList;
