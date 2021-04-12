@@ -1,0 +1,26 @@
+.addInputWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.addInput {
+  height: 30px;
+  width: 30%;
+  border: solid 3px #2d88df;
+  border-radius: 3px;
+}
+
+.addInput:focus {
+  border-color: #bb33ff;
+}
+
+.btnstyles {
+  color: #2d88df;
+  cursor: pointer;
+}
+
+.btnstyles:hover {
+  color: #bb33ff;
+  transition: ease-in 0.2s;
+}
