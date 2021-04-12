@@ -20,9 +20,10 @@ const TodoList = ({ todosData }) => {
       </div>
 
       <div>
-        {tasks.map((todo) => (
+        {tasks.map((todo, index) => (
           <TodoItem
-            key={todo.id}
+            key={todo.text}
+            todoIndex={index}
             text={todo.text}
             setCount={setCount}
             count={count}
@@ -36,4 +37,4 @@ const TodoList = ({ todosData }) => {
   );
 };
 
-export default TodoList;
+export default memo(TodoList);
