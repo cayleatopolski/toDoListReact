@@ -3,7 +3,7 @@ import styles from './todoitem.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUndo, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-const TodoItem = ({ text, setCount, count }) => {
+const TodoItem = ({ text, setCount, count, todoIndex, tasks, setTasks }) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
   const handleClick = () => {
@@ -11,6 +11,15 @@ const TodoItem = ({ text, setCount, count }) => {
 
     !isCompleted && setCount(count + 1);
     isCompleted && setCount(count - 1);
+  };
+
+  const handleDelete = (todoIndex) => {
+    let filteredDeletes = tasks.filter(
+      (checkedTask, index) => index != todoIndex
+    );
+    setTasks(filteredDeletes);
+
+    console.log('delete ran on click ', 'filteredDeletes: ', filteredDeletes);
   };
 
   return (
@@ -34,7 +43,7 @@ const TodoItem = ({ text, setCount, count }) => {
             />
           )}
         </button>
-        <button>
+        <button onClick={() => handleDelete(todoIndex)}>
           <FontAwesomeIcon
             icon={faTrashAlt}
             size='2x'
