@@ -1,0 +1,9 @@
+.filterInput {
+  height: 30px;
+  border: solid 3px #2d88df;
+  border-radius: 3px;
+}
+
+.filterInput:focus {
+  border-color: #bb33ff;
+}

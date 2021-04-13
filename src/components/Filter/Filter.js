@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './filter.module.css';
 
 const Filter = ({ tasks, setTasks }) => {
   const [value, setValue] = useState('');
@@ -27,6 +28,7 @@ const Filter = ({ tasks, setTasks }) => {
         onChange={(event) => setValue(event.target.value)}
         value={value}
         placeholder='Filter by task name'
+        className={styles.filterInput}
       />
     </div>
   );
