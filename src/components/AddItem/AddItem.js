@@ -3,13 +3,12 @@ import styles from './addItem.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
-const AddItem = ({ tasks, setTasks }) => {
+const AddItem = ({ filteredTasks, setFilteredTasks }) => {
   const [value, setValue] = useState('');
 
   const addTask = () => {
-    setTasks([...tasks, { id: value, text: value }]);
+    setFilteredTasks([...filteredTasks, { id: value, text: value }]);
     setValue('');
-    console.log('add ran on click ', value, tasks);
   };
 
   return (
