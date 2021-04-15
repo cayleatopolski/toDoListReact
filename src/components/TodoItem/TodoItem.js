@@ -3,7 +3,14 @@ import styles from './todoitem.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faUndo, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
-const TodoItem = ({ text, setCount, count, todoIndex, tasks, setTasks }) => {
+const TodoItem = ({
+  text,
+  setCount,
+  count,
+  todoIndex,
+  filteredTasks,
+  setFilteredTasks,
+}) => {
   const [isCompleted, setIsCompleted] = useState(false);
 
   const handleClick = () => {
@@ -14,12 +21,10 @@ const TodoItem = ({ text, setCount, count, todoIndex, tasks, setTasks }) => {
   };
 
   const handleDelete = (todoIndex) => {
-    let filteredDeletes = tasks.filter(
-      (checkedTask, index) => index != todoIndex
+    let filteredDeletes = filteredTasks.filter(
+      (checkedTask, index) => index !== todoIndex
     );
-    setTasks(filteredDeletes);
-
-    console.log('delete ran on click ', 'filteredDeletes: ', filteredDeletes);
+    setFilteredTasks(filteredDeletes);
   };
 
   return (
